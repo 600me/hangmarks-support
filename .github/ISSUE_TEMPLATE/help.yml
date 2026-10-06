@@ -1,0 +1,19 @@
+name: Help or feedback / 帮助与反馈
+description: Ask about HangMarks or report a problem. 请勿填写个人隐私信息。
+title: "[Help] "
+body:
+  - type: markdown
+    attributes:
+      value: "This report is public. Do not include private information. 此反馈公开，请勿提交地址、私人照片、收据或密码。"
+  - type: textarea
+    id: question
+    attributes:
+      label: Question or problem / 问题说明
+      description: Describe what you expected and what happened. 可以用中文。
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App and iOS version / 应用及系统版本
+      placeholder: "HangMarks 1.0, iOS 26"
