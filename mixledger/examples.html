@@ -1,0 +1,146 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A 300 g batch at a 2:1 mass ratio: individual additions, cumulative scale readings and actual ratio deviations, in English and Chinese."><link rel="canonical" href="https://600me.github.io/hangmarks-support/mixledger/examples.html"><title>Two-part mixing ratio example · MixLedger · 配料批次</title><style>:root{color-scheme:light dark;--ink:#173e40;--paper:#f7fbfa;--line:#cbdedb}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 system-ui,-apple-system,sans-serif}main{max-width:860px;margin:auto;padding:40px 24px 64px}header,footer{border-block-end:1px solid var(--line);padding-bottom:20px}nav a{margin-right:24px}a{color:inherit;text-underline-offset:4px}h1{font-size:clamp(32px,6vw,48px);line-height:1.2}h2{margin-top:32px}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:10px;border-bottom:1px solid var(--line)}section[lang=zh-Hans]{border-top:1px solid var(--line);padding-top:24px;margin-top:40px}footer{border-top:1px solid var(--line);padding-top:20px;margin-top:40px;font-size:14px}@media(prefers-color-scheme:dark){:root{--ink:#d9eee7;--paper:#142925;--line:#42534c}}table{border-collapse:collapse;width:100%;font-size:15px}th,td{padding:12px;text-align:left;vertical-align:top;border:1px solid var(--line)}th{background:color-mix(in srgb,var(--ink) 6%,var(--paper))}.table-scroll{overflow-x:auto;margin:20px 0}.table-scroll table{min-width:570px}nav{display:flex;flex-wrap:wrap;gap:8px 18px}nav a{margin-right:0}li{margin:8px 0}.language-links{font-size:15px}@media(max-width:480px){main{padding:28px 18px 48px}h2{font-size:22px}}</style></head><body><main><header><strong>MixLedger · 配料批次</strong><nav><a href="index.html">Help / 帮助</a><a href="examples.html">Worked example / 实操算例</a><a href="privacy.html">Privacy / 隐私</a></nav></header><h1>Two-part mixing ratio example</h1><p class="language-links"><a href="#english">English</a> · <a href="#chinese">中文</a></p><article id="english" class="worked-example">
+  <h2>Worked Example: Two-Part Mass Batch & Deviation Tracking</h2>
+  <p class="muted">These example values match version 1.0 calculations. The app is not yet available on the App Store.</p>
+
+  <h3>Batch plan setup</h3>
+  <ul>
+    <li><strong>Target batch size:</strong> 300 g total</li>
+    <li><strong>Ratio basis:</strong> Mass ratio of 2:1 (Component A: 2 parts, Component B: 1 part)</li>
+    <li><strong>Scale container tare:</strong> Scale tared to 0 g (container mass = 0 g)</li>
+  </ul>
+
+  <h3>Planned additions & cumulative readings</h3>
+  <div class="table-scroll" role="region" aria-label="Example measurements" tabindex="0"><table>
+    <thead>
+      <tr>
+        <th>Component</th>
+        <th>Target addition</th>
+        <th>Cumulative scale reading</th>
+        <th>Nominal share</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Component A</td>
+        <td><strong>200 g</strong></td>
+        <td><strong>200 g</strong></td>
+        <td>66.667% (2/3)</td>
+      </tr>
+      <tr>
+        <td>Component B</td>
+        <td><strong>100 g</strong></td>
+        <td><strong>300 g</strong></td>
+        <td>33.333% (1/3)</td>
+      </tr>
+    </tbody>
+  </table></div>
+
+  <h3>Actual addition logging & deviation comparison</h3>
+  <p>Suppose the operator actually pours <strong>195 g</strong> of Component A and <strong>105 g</strong> of Component B (actual batch total = <strong>300 g</strong>):</p>
+
+  <div class="table-scroll" role="region" aria-label="Example measurements" tabindex="0"><table>
+    <thead>
+      <tr>
+        <th>Component</th>
+        <th>Actual addition</th>
+        <th>Actual share</th>
+        <th>Deviation (percentage points)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Component A</td>
+        <td>195 g</td>
+        <td>65.000%</td>
+        <td><strong>≈ -1.667 points</strong> (-1.6667)</td>
+      </tr>
+      <tr>
+        <td>Component B</td>
+        <td>105 g</td>
+        <td>35.000%</td>
+        <td><strong>≈ +1.667 points</strong> (+1.6667)</td>
+      </tr>
+    </tbody>
+  </table></div>
+
+  <h3>Before using these numbers</h3>
+  <ul>
+    <li><strong>Numerical deviation vs. chemical suitability:</strong> The deviation points reflect pure mathematical differences between entered actual additions and the target formula. They do NOT evaluate resin curing, mechanical strength, chemical pot life, or material fitness.</li>
+    <li><strong>Mass vs. volume basis:</strong> Always select the basis indicated on the manufacturer's label. If mixing by volume but measuring in mass (or vice versa), enter the exact positive density (g/mL) for every component. Never guess densities.</li>
+    <li><strong>Hardware independence:</strong> MixLedger is a standalone offline log. It does not pair with Bluetooth scales, automate dispensing valves, or bundle proprietary brand recipes.</li>
+  </ul>
+
+  <section id="chinese" lang="zh-Hans">
+    <h2>实操算例：双组分重量比配料与称量偏差跟踪</h2>
+    <p class="muted">本例数值已按 1.0 版本计算结果核对。1.0 版本正在准备中，尚未在 App Store 上架。</p>
+
+    <h3>配方计划设定</h3>
+    <ul>
+      <li><strong>目标总重量：</strong> 300 g</li>
+      <li><strong>比例基准：</strong> 重量比 2:1（组分 A 为 2 份，组分 B 为 1 份）</li>
+      <li><strong>电子秤皮重：</strong> 电子秤已去皮置零（容器质量 = 0 g）</li>
+    </ul>
+
+    <h3>计划添加量与电子秤累计读数</h3>
+    <div class="table-scroll" role="region" aria-label="Example measurements" tabindex="0"><table>
+      <thead>
+        <tr>
+          <th>组分名称</th>
+          <th>计划单项添加量</th>
+          <th>电子秤累计显示读数</th>
+          <th>理论标称份额</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>组分 A</td>
+          <td><strong>200 g</strong></td>
+          <td><strong>200 g</strong></td>
+          <td>66.667%（2/3）</td>
+        </tr>
+        <tr>
+          <td>组分 B</td>
+          <td><strong>100 g</strong></td>
+          <td><strong>300 g</strong></td>
+          <td>33.333%（1/3）</td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <h3>实际称量记录与偏差比对</h3>
+    <p>假设在实际操作中，操作员实际加入组分 A 为 <strong>195 g</strong>，组分 B 为 <strong>105 g</strong>（总重量保持 <strong>300 g</strong>）：</p>
+
+    <div class="table-scroll" role="region" aria-label="Example measurements" tabindex="0"><table>
+      <thead>
+        <tr>
+          <th>组分名称</th>
+          <th>实际称量值</th>
+          <th>实际占比份额</th>
+          <th>份额偏差（百分点）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>组分 A</td>
+          <td>195 g</td>
+          <td>65.000%</td>
+          <td><strong>约 -1.667 百分点</strong>（-1.6667）</td>
+        </tr>
+        <tr>
+          <td>组分 B</td>
+          <td>105 g</td>
+          <td>35.000%</td>
+          <td><strong>约 +1.667 百分点</strong>（+1.6667）</td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <h3>操作常见误区与边界说明</h3>
+    <ul>
+      <li><strong>纯数学比对不等于材料合格判定：</strong> 百分点偏差仅代表实际称量份额与预设配方之间的数值差距，应用绝对不判定树脂是否固化、物理强度是否合格或化学适用性如何。</li>
+      <li><strong>重量与体积基准不可混淆：</strong> 请严格按照材料厂商标签选择基准。若配方基于体积但使用重量测量，必须准确输入每种组分的真实密度（g/mL），严禁凭经验猜测。</li>
+      <li><strong>离线工具无硬件联动：</strong> 配料批次是单机离线记录工具，不连接蓝牙电子秤，不控制自动点胶阀门，亦不内置任何商业品牌配方。</li>
+    </ul>
+  </section>
+</article>
+<footer><a href="index.html">Back to help / 返回帮助</a><br>Updated 11 October 2026</footer></main></body></html>
